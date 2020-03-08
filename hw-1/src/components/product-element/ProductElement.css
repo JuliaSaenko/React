@@ -1,0 +1,37 @@
+.products__row:nth-child(even) {
+    background-color: #f2f2f2;
+
+}
+
+.products__row td {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.products__row-btns {
+    display: flex;
+    padding: 15px 20px;
+}
+
+.products__row-btns button {
+    display: block;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.products__row-btns button:hover {
+    color: #4CAF50;
+    background-color: white;
+}
+
+.products__row-btns button:nth-child(even) {
+    margin-left: 20px;
+}

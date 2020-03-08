@@ -1,0 +1,58 @@
+.new-product-from p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.new-product-from label {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.new-product-from input,
+.new-product-from select {
+    display: flex;
+    padding: 16px;
+    width: 160px;
+    font-size: 20px;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 6px;
+    background-color: transparent;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.new-product-from select {
+    font-size: 20px;
+    max-height: calc(1.6em + 24px);
+    height: calc(1.6em + 24px);
+}
+
+.new-product-from input:hover,
+.new-product-from select:hover {
+    opacity: 1;
+}
+
+.new-product-from button {
+    display: block;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.new-product-from button:hover {
+    color: #4CAF50;
+    background-color: white;
+}
+
+.new-product-from option {
+    padding: 10px;
+}
