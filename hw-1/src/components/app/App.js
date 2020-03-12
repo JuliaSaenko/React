@@ -42,8 +42,6 @@ export default class App extends Component {
             ...newProductData
         };
 
-        console.log(newItem);
-
         this.setState(({ productsElements }) => {
             const newArr = [
                 ...productsElements,

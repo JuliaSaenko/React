@@ -19,7 +19,6 @@ export default class AddProductForm extends Component {
             [name]: value
         });
 
-        console.log(value);
     };
 
 
