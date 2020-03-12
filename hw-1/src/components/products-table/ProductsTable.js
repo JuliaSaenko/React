@@ -4,7 +4,7 @@ import ProductElement from '../product-element';
 
 import './ProductsTable.css'
 
-const ProductsTable = ({ products, onEdit, onDeleted }) => {
+const ProductsTable = ({ products, onDeleted }) => {
 
     const elements = products.map((item) => {
         const {id, ...itemProps} = item;
