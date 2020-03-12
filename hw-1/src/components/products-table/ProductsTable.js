@@ -13,7 +13,6 @@ const ProductsTable = ({ products, onEdit, onDeleted }) => {
             <ProductElement
                 key={id}
                 {...itemProps }
-                onEdit={()=> onEdit(id)}
                 onDeleted={() => onDeleted(id)}
             />
         );
