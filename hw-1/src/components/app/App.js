@@ -36,14 +36,13 @@ export default class App extends Component {
         });
     };
 
-    addItem = (label, category, price, balance, form) => {
+    addItem = (newProductData) => {
         const newItem = {
             id: Math.random() +'',
-            label,
-            category,
-            price,
-            balance,
+            ...newProductData
         };
+
+        console.log(newItem);
 
         this.setState(({ productsElements }) => {
             const newArr = [
@@ -55,9 +54,6 @@ export default class App extends Component {
                 productsElements: newArr
             };
         });
-
-        form.reset();
-
     };
 
 
@@ -68,7 +64,7 @@ export default class App extends Component {
                     products={this.state.productsElements}
                     onDeleted={ this.deleteItem }
                 />
-                <AddProductForm  onClick={ this.addItem}/>
+                <AddProductForm onAddProduct = { this.addItem }/>
             </div>
         );
     }

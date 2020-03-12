@@ -1,7 +1,6 @@
 .main {
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1600px;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     line-height: 24px;

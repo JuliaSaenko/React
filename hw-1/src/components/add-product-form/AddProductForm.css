@@ -1,3 +1,7 @@
+.new-product-from__wrapper {
+    margin-left: 50px;
+}
+
 .new-product-from p {
     display: flex;
     flex-wrap: wrap;

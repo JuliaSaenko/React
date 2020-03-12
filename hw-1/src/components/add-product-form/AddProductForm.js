@@ -2,52 +2,66 @@ import React, { Component } from 'react';
 
 import './AddProductForm.css'
 
+
 export default class AddProductForm extends Component {
 
     state = {
-        name: '',
+        label: '',
         category: '',
         price: '',
         balance: '',
     };
 
     handleFormChange = (event) => {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
+        const { name, value } = event.target;
 
         this.setState({
             [name]: value
         });
+
+        console.log(value);
+    };
+
+
+    addProduct = () => {
+        this.props.onAddProduct(this.state);
+        this.setState({
+            label: '',
+            category: '',
+            price: '',
+            balance: ''
+        });
+
     };
 
   render() {
-      const { onClick } = this.props;
+
       return (
-          <div>
+          <div className='new-product-from__wrapper'>
               <h2>Add new product</h2>
               <form className='new-product-from' id="productForm">
                   <p>
-                      <label htmlFor="name">Enter product name:</label>
-                      <input onChange={this.handleFormChange} type="text" id="name" name="name"/>
+                      <label htmlFor="label">Enter product name:</label>
+                      <input value={ this.state.label } onChange={ this.handleFormChange } type="text" id="label" name="label"/>
                   </p>
                   <p>
                       <label htmlFor="category">Enter product category:</label>
-                      <select onChange={this.handleFormChange} name="category" id="category">
-                          <option>Laptop</option>
-                          <option>Tablet</option>
-                          <option>Cellphone</option>
+                      <select value={ this.state.category } onChange={ this.handleFormChange } name="category" id="category">
+                          <option value="" defaultValue disabled hidden>Choose here</option>
+                          <option value="Laptop">Laptop</option>
+                          <option value="Tablet">Tablet</option>
+                          <option value="Cellphone">Cellphone</option>
                       </select>
                   </p>
                   <p>
                       <label htmlFor="price">Enter product price:</label>
-                      <input onChange={this.handleFormChange} type="number" id="price" name="price"/>
+                      <input value={ this.state.price } onChange={ this.handleFormChange } type="number" id="price" name="price"/>
                   </p>
                   <p>
                       <label htmlFor="balance">Enter product balance:</label>
-                      <input onChange={this.handleFormChange} type="number" id="balance" name="balance"/>
+                      <input value={ this.state.balance } onChange={ this.handleFormChange } type="number" id="balance" name="balance"/>
                   </p>
-                  <button type="button" onClick={() => onClick(this.state.name, this.state.category, this.state.price, this.state.balance, document.querySelector(`#productForm`))}>Add product</button>
+                  <button type="button" onClick={ this.addProduct }>Add product</button>
               </form>
           </div>
       );
