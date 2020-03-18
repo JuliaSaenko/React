@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.list {
+  list-style: none;
+}
+
+.column {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--fixed {
+    position: relative;
+  }
+}
