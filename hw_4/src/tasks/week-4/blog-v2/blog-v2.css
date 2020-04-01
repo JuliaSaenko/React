@@ -1,0 +1,15 @@
+.active-nav {
+    color: red !important;
+}
+
+.page {
+    position: relative;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white;
+}
+
+.contaier {
+    width: auto !important;
+}
