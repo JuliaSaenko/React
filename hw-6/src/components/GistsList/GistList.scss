@@ -1,0 +1,62 @@
+.gist-list {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 50px 50px;
+  width: 40%;
+  list-style: none;
+  counter-reset: li;
+}
+
+.gist-item {
+  left: 1.5em;
+  margin-bottom: 0.75em;
+  padding: 15px;
+  position: relative;
+  background: rgba(82, 83, 104, 1);
+  color: rgba(36, 36, 45, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &::before {
+    padding: 10px 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 2em;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    font-weight: bold;
+    background: rgba(230, 140, 92, 1);
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    counter-increment: li;
+    content: counter(li);
+  }
+
+  &:hover {
+    color: white;
+
+    .gist-item__language {
+      color: rgba(205, 108, 60, 1);
+    }
+  }
+}
+
+.gist-item h2 {
+  display: block;
+  margin: 0 0 15px 10px;
+}
+
+.gist-item p {
+  display: block;
+  margin: 0 0 0 10px;
+}

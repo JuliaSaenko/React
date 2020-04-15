@@ -1,0 +1,22 @@
+.gist-info {
+
+  padding: 60px 50px 50px;
+  width: 50%;
+  color: rgba(36, 36, 45, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.gist-info__wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.gist-info pre {
+  position: sticky;
+  top: 60px;
+  left: 50px;
+  min-height: 100px;
+  border-radius: 8px;
+}
