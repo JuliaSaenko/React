@@ -19,7 +19,7 @@
     "react-spring": "^8.0.27",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
